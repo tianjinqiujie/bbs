@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,HttpResponse
 from django.db.models import Count
 # Create your views here.
 from django.contrib import auth
+from utils.code import check_code
 
 from blog.models import Article,UserInfo,Category,Tag,ArticleUpDown,Comment,Article2Tag
 from blog import forms
@@ -12,15 +13,28 @@ from django.http import JsonResponse
 from bbs import settings
 import os
 
+
+def code(request):
+    img,random_code = check_code()
+    request.session['random_code'] = random_code
+    from io import BytesIO
+    stream = BytesIO()
+    img.save(stream, 'png')
+    return HttpResponse(stream.getvalue())
+
 def login(request):
     if request.method == 'POST':
         user = request.POST.get('user')
         pwd = request.POST.get('pwd')
+        code = request.POST.get('code')
+        if code.upper() != request.session['random_code'].upper():
+            return render(request, 'login.html', {'msg': '验证码错误'})
         user = auth.authenticate(username=user,password=pwd)
         if user:
             auth.login(request,user)
             return redirect('/index/')
     return render(request,'login.html')
+
 def register(request):
     if request.method == "POST":
         print(request.POST)
