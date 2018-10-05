@@ -64,3 +64,5 @@ pip install -r requirements.txt
 后端：
 
 ![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/4.png)
+
+![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/5.png)
