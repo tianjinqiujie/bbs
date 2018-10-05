@@ -57,10 +57,10 @@ pip install -r requirements.txt
 
 前端：
 
-![https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/2.png]()
+![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/2.png)
 
-![https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/3.png]()
+![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/3.png)
 
 后端：
 
-![https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/4.png]()
+![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/4.png)
