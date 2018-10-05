@@ -47,7 +47,7 @@ pip install -r requirements.txt
 
 本项目涉及8个表，表关系包含一对一，一对多，多对多！ 表关系图如下：
 
-![https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/1.png]()
+![](https://github.com/tianjinqiujie/bbs/blob/master/Screenshots/1.png)
 
 图中箭头开始的英文字母表示关联字段
 
