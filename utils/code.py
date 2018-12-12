@@ -11,7 +11,7 @@ def check_code(width=120, height=30, char_length=5, font_file='kumo.ttf', font_s
         :return:
         """
         return chr(random.randint(65, 90))
-
+  
     def rndColor():
         """
         生成随机颜色
